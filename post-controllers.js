@@ -1,4 +1,4 @@
-var Article = require('./../models/Article.js');
+var Article = require('Article.js');
 
 module.exports.new = function(request, response) {
   response.render('form.ejs');

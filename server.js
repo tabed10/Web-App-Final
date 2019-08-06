@@ -11,17 +11,16 @@ var mongoose = require("mongoose");
 
 mongoose.connect(db_url, { useNewUrlParser: true });
 mongoose.connection.on('error', function(err){
-  console.log(err);
-  console.log('Could not connect to mongodb');
+  
 })
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}))
 
  app.get('/',function(req,res){
-     res.sendFile(__dirname+'/view/form.html')
+     res.sendFile(__dirname+'/view/formView.html')
 })
 app.get('/article',function(req,res){
-       res.sendFile(__dirname+'/view/posts.html')
+       res.sendFile(__dirname+'/view/singleView.html')
  })
  server.listen(3000, 'localhost', function(){
      console.log('Server running');
